@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Tell GitHub Linguist to ignore the following files and folders for language detection:
+templates/* linguist-vendored
+static/* linguist-vendored
+public/* linguist-vendored
+
+# Prioritize Java as the main language
+*.java linguist-language=Java
