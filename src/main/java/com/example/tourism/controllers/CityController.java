@@ -24,4 +24,11 @@ public class CityController {
         return "index";
     }
 
+    @GetMapping("/offers")
+    public String showOffersPage(Model model) {
+        List<City> cities = cityRepository.findAll();
+        model.addAttribute("cities", cities);
+        return "offers";
+    }
+
 }

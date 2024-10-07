@@ -13,7 +13,7 @@
   <div class="nav__logo"><a href="#">Visit Morocco</a></div>
   <ul class="nav__links">
     <li class="link"><a href="/" style="color: black; text-decoration: none;">Home</a></li>
-    <li class="link"><a href="#" style="color: black; text-decoration: none;">Offers</a></li>
+    <li class="link"><a href="/offers" style="color: black; text-decoration: none;">Offers</a></li>
     <li class="link"><a href="/services" style="color: black; text-decoration: none;">Services</a></li>
     <li class="link"><a href="/contacts" style="color: black; text-decoration: none;">Contacts</a></li>
   </ul>
@@ -35,22 +35,18 @@
 </header>
 
 
-<!-- Updated section: Scrolling List of Cities -->
 <section class="journey__container">
   <div class="section__container">
     <h2 class="section__title">The Most Searched Cities in Morocco</h2>
     <p class="section__subtitle">Discover the destinations that everyone is talking about.</p>
 
-    <!-- Scrolling Slider -->
     <div class="slider" style="
       --width: 200px;
       --height: 150px;
       --quantity: 6;
     ">
       <div class="list">
-        <!-- Updated th:each to include status for iteration tracking -->
         <th:block th:each="city, status : ${cities}">
-          <!-- Updated the index usage to status.index -->
           <div class="item" th:style="'--position: ' + (${status.index} + 1)">
             <img th:src="@{/assets/images/} + ${city.imageUrl}" th:alt="${city.name}">
             <p th:text="${city.name}"></p>
@@ -61,7 +57,6 @@
   </div>
 </section>
 
-<!-- Added background image to banner section -->
 <section class="banner__container" style="background-image: url('/assets/images/bg-banner.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 60px 0; color: #fff;">
   <div class="section__container">
     <div class="banner__content" style="background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px;">
